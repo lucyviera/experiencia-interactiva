@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo final PAI II</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <!-- Overlay inicial -->
+    <div id="overlay" onclick="iniciarExperiencia()"><p>Desempañá tus lentes</p></div>
+    <audio id="trafficAudio" src="audio/traffic.mp3"></audio>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <img src="img/noche1.jpg" alt="" class="fondo">
+        <!-- Contenedor flexible -->
+        <div class="flex-container">
+            <div class="posiciongato">
+                <img src="img/gatoestaticoinicio.png" id="gatete" class="gato">
+            </div>
+          <div class="edificio"> 
+                <div class="fila">
+                    <div id="prueba1" class="ventana pointer" onclick="activarAnimacion()">
+                        <img src="img/pngventana.png" alt="">
+                    </div>
+                    <div id="prueba2" class="ventana pointer" onclick="activarAnimacion2()">
+                        <img src="img/pngventana.png" alt="">
+                    </div>
+                    <div id="prueba3" class="ventana pointer" onclick="activarAnimacion3()">
+                        <img src="img/pngventana.png" alt="">
+                    </div>   
+                </div>   
+                <div class="fila">
+                    <div id="prueba4" class="ventana pointer" onclick="activarAnimacion4()">
+                        <img src="img/pngventana.png" alt="">
+                    </div> 
+                    <div id="prueba5" class="ventana pointer" onclick="activarAnimacion5()">
+                        <img src="img/pngventana.png" alt="">
+                    </div> 
+                    <div id="prueba6" class="ventana pointer" onclick="activarAnimacion6()">
+                        <img src="img/pngventana.png" alt="">
+                    </div> 
+                </div>
+                <div class="fila tercera">
+                    <div id="prueba7" class="ventana pointer" onclick="activarAnimacion7()">
+                        <img src="img/pngventana.png" alt="">
+                    </div> 
+                    <div id="prueba8" class="ventana pointer" onclick="activarAnimacion8()">
+                        <img src="img/pngventana.png" alt="">
+                    </div> 
+                </div>
+            </div>     
+        </div>
+    </div>  
+    <script type="text/javascript" src="eventos.js"></script> 
+</body>
+</html>

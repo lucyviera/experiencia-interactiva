@@ -1,0 +1,296 @@
+* {box-sizing: border-box;
+    height: 100%; 
+    }
+    
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 20;
+    cursor: pointer;
+}
+
+.doto-uniquifier {
+    font-family: "Doto", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "ROND" 0;
+  }
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-family: "Doto", serif;
+    z-index: 10;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+body{
+    overflow: hidden;
+}
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-size: cover ;
+} 
+
+.edificio{
+    display: flex;
+    flex-direction: column;
+    background-color: #6b3964;
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    clip-path: polygon(-10% 5%, 50% 0%, 100% 5%, 100% 100%, 0% 100%);
+}
+
+.posiciongato {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+.gato {
+    display: grid;
+    grid-row: 2;
+    grid-column: 3;
+    height: auto;
+    width: 12%;
+    z-index: 15;
+    margin: auto;
+    margin-bottom: -1%;
+    margin-left: 23%;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.fila {
+    display: flex;
+    gap: 5%; /* Espacio entre rectángulos */
+    justify-content: center;
+    height: auto;
+    margin-top: 10%; 
+}
+
+.fila > div {
+    background-color: #ffff4e;
+    height: auto;
+    width: 25% ;
+    z-index: 8; 
+}
+
+div .tercera > :first-child, 
+div .tercera > :last-child {
+    display: none;
+}
+
+#prueba1 {
+    animation: luz2 2s infinite;
+    animation-play-state: running;
+}
+
+#prueba2, #prueba3, #prueba4, #prueba5, #prueba6, #prueba7, #prueba8 {
+    animation: luz 0.5s;
+    animation-play-state: paused;
+    background-color: #030328;
+}
+
+@keyframes luz {
+    from{ background-color: #ffff4e;}
+    to{ background-color:#030328;}
+}
+
+@keyframes luz2 {
+    0%, 50%, 100%{
+        box-shadow: none;}
+    25%, 75% { background: #ffff4e; 
+        box-shadow: 0 0 20px #ffff4e, 0 0 20px #ffff4e, 0 0 20px #ffff4e;
+    }
+}
+
+@keyframes moverGato {
+    0% {
+        width: 25%;
+    }
+    100% {
+        grid-column: 2;
+        width: 25%; 
+        margin: auto;
+        margin-bottom: -1%;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .edificio {
+        width: 50%;
+        height: 60%;
+    }
+
+    .gato {
+        height: auto;
+        width: 18% ;
+        margin-left: 70%;
+    }
+
+    @keyframes moverGato {
+        0% {
+            width: 45%;
+        }
+ 
+        100% {
+           grid-column: 2;
+           width: 45%;
+           margin: auto;
+           margin-bottom: -1%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    p {
+        text-align: center;
+    }
+
+    div .fila > :last-child {
+        display: none;
+    }
+
+    div .tercera > :first-child, 
+    div .tercera > :last-child {
+        display: flex;
+    }
+
+    .edificio {
+        width: 50%;
+        height: 60%;
+    }
+
+    .fila {
+        display: flex;
+        gap: 10%; /* Espacio entre rectángulos */
+        justify-content: center;
+        height: auto;
+        margin-top: 10%;  
+    }
+
+    .fila > div {
+        display: flex;
+        background-color: #ffff4e;
+        height: auto;
+        width: 32% ;
+        z-index: 8;
+    }
+
+    .gato {
+        height: auto;
+        width: 25% ;
+        margin-bottom: 18%;
+        margin-left: 24%;
+    }
+
+    @keyframes moverGato {
+        0% {
+            width: 60%;
+         
+        }
+    
+        100% {
+           grid-column: 2;
+           width: 60%;
+           margin: auto;
+           margin-bottom: -1%;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    p {
+        text-align: center;
+    }
+
+    div .fila > :last-child {
+        display: none;
+    }
+
+    div .tercera > :first-child, 
+    div .tercera > :last-child {
+        display: flex;
+    }
+
+    .edificio {
+        width: 60%;
+        height: 60%;
+    }
+
+    .fila {
+        display: flex;
+        gap: 10%; /* Espacio entre rectángulos */
+        justify-content: center;
+        height: auto;
+        margin-top: 20%;
+
+    }
+
+    .fila > div {
+        display: flex;
+        background-color: #ffff4e;
+        height: auto;
+        width: 30% ;
+        z-index: 8;
+    }
+
+    .gato {
+        height: auto;
+        width: 30% ;
+        margin-bottom: 29%;
+        margin-left: 55%;
+    }
+
+    @keyframes moverGato {
+        0% {
+            width: 80%;
+        }
+    
+        100% {
+           grid-column: 2;
+           width: 80%;
+           margin: auto;
+           margin-bottom: -1%;
+        }
+    }
+}
