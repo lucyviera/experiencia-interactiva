@@ -44,4 +44,10 @@ El producto fue **atemporal** y de **uso casual**, sin necesidad de instruccione
    - Un archivo PDF que documentó el proceso de creación, el diseño gráfico y las interacciones implementadas.
 
 
+
 © 2024 Equipo [Lucía Viera, Lis Ventimiglia, Milagros Garro]. Proyecto académico desarrollado para PAI II | LDCV | 2024.
+© Ilustraciones gato y creaciones de gif by Lucía Viera
+© Ilustraciones fondos by Lis Ventimiglia y Milagros Garro
+© Sonidos by BBC Sound, YT, freesound, y editado con CapCut.
+
+
